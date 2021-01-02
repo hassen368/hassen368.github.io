@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task20</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  </head>
+  <body>
+      <h3>Détecter lorsqu’on appuie sur la touche entrée en jquery</h3>
+      <br/>
+      <p>Entrer des mots ici </p>
+      <input type="text" id="titre">
+     
+    </div>
+    <script>
+      $('#titre').keyup(function(e) {
+   if(e.keyCode == 13) { // KeyCode de la touche entrée
+          alert('Hey ! Tu as appuyé sur la touche entrée !!');
+          $('#result').html($("#titre").val());
+ }
+});
+
+    </script>
+  </body>
+</html>

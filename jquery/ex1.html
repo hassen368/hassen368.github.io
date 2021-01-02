@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<title>Task1</title>
+	
+	<h3>SAVOIR SI UN ÉLÉMENT EST VISIBLE OU HIDDEN </h3>
+</head>
+<body>
+
+
+      
+        <div id="Element">
+        	Element
+        </div>
+        <button id="bouton">Hide</button>
+      </div>
+	<script >
+		 $(document).ready(function(){
+  $("#bouton").click(function(){
+    $("#Element").hide();
+  });
+  setInterval(function(){
+    if ($("#Element").is(":visible")){alert ("l'element est visible");}
+    if ($("#Element").is(":hidden")){alert ("l'element est caché"); }
+  },4000);
+
+});
+	</script>
+
+</body>
+</html>

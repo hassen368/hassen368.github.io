@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact</title>
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyC1GH4jAPXGewUuUboLtsFdtn1rqE8aTMg" type="text/javascript"></script>
+<script  src="ex1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="Main.js"></script>
+
+
+
+
+
+</head>
+<body>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-23.291015625000004%2C24.56710835257599%2C33.22265625000001%2C47.12995075666307&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=5/36.668/4.966">Afficher une carte plus grande</a></small>
+
+	
+  <form class="myForm" action="Message.html">
+  <h3>Contact</h3>
+  <p>Be called back for more information</p>
+<label class="labelForm" for="firstname">First name (*)</label>
+      <input class="inputForm"  name="firstname" required
+             oninput="sessionStorage.setItem('Name_v', this.value);"/>
+</br>
+<label class="labelForm" for="lastname">Last name (*)</label>
+      <input class="inputForm" type='text' name="lastname" required
+             oninput="sessionStorage.setItem('lastname_v', this.value);" />
+      <br></br>
+<label class="labelForm" for="lastname">You want to be<br/> contacted by</label>
+      <select class="SelectForm" name="Selection1">
+        <option value="Phone">Phone</option>
+        <option value="Phone">E-mail</option>
+        
+      </select> 
+</br>
+ <label class="labelForm" for="PhoneNm">Phone number</label>
+      <input class="inputForm" type='number' name="PhoneNm" />
+ </br>
+
+      <label class="labelForm" for="Date">When(*)</label>
+      <input class="inputForm" type='Date' name="Date" required
+             oninput="sessionStorage.setItem('date_v', this.value);" />
+
+      <br></br>
+
+      <label class="labelForm" for="time1">Between(*)</label>
+      <input class="inputForm" type='time' name="time1" required
+             oninput="sessionStorage.setItem('time1_v', this.value);" />
+      <label class="labelForm" for="time2">and</label>
+      <input class="inputForm" type='time' name="time2" required
+             oninput="sessionStorage.setItem('time2_v', this.value);"  />
+ </br>
+
+
+<input class ="formbtnReset" type="reset" value="cancel"/>
+      <input class ="formbtnSubmit" type="submit" value="submit"/>
+    </form>
+     
+
+
+</body>
+</html>

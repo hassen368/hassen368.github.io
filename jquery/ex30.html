@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task30</title>
+  </head>
+  <body>
+      <h3>Faire clignoter un élément avec jquery</h3>
+      <br/>
+      <img id="image-neon" src="./images/cat1.png" height="500px" width="950px"/>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+    function FaireClignoterImage (){ $("#image-neon").fadeOut(200).delay(300).fadeIn(200); }
+    setInterval(FaireClignoterImage,2000);
+});
+
+    </script>
+  </body>
+</html>

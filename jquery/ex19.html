@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task19</title>
+  </head>
+  <body>
+      <h3> SÉLECTEURS REGEXP ET JQUERY</h3>
+      <br/>
+      <div id="abcd">Not matched</div>
+      <div id="abccd">Not matched</div>
+      <div id="abcccd">Not matched</div>
+      <div id="abd">Not matched</div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+      $('div')
+  .filter(function() {
+    return this.id.match(/abc+d/);
+  })
+  .html("Matched!");
+
+    </script>
+  </body>
+</html>

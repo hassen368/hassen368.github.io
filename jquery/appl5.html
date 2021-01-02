@@ -1,0 +1,80 @@
+<!doctype>
+<html>
+	<head>
+    <title>  Formation </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+   
+		<body>
+      <div id="a">
+
+
+			<h1 ALIGN=CENTER> INSCRIPTION </h1>
+			<form name="form1">
+				<p align=center> 
+					<label for="pseudo">Nom et Prénom* :</label>
+					<input type="text" name="pseudo" id="pseudo" required/>
+					<p align=center>
+					<label for="cin">CIN* :</label>
+                    <input type="number" name="cin" id="cin" required/>
+                    <p align=center>
+                    <label for="email">Adresse e-mail* :</label>
+					<input type="email" name="email" id="email" required/>
+				<p ALIGN=CENTER>
+				<label id="Niveau">Niveau :</label>
+					<INPUT type="radio" name="choix1" value="1" checked="checked"> Secondaire
+					<INPUT type="radio" name="choix2" value="2"> Universitaire
+					<INPUT type="radio" name="choix3" value="3"> Autre
+				</FORM>
+                </p>
+                <p align=center>
+					<label id="modules">Modules de formation :</label>
+					<SELECT NAME="modules:" SIZE=0 >
+					<OPTION> Bureautique
+					<OPTION> SE et réseaux info
+					<OPTION> TIC
+                    </SELECT>
+                <p ALIGN=center>
+                    <label>(*)champ obligatoire</label>
+                </p>    	
+				<p ALIGN=center>
+                    <INPUT TYPE="submit" id= "Envoyer" VALUE="Envoyer">
+                    <INPUT TYPE="button" id= "Annuler" VALUE="Annuler">
+
+ 
+				</p>
+            </form>
+            </div>
+            <script>
+                $(function()
+                {
+                    $("#Envoyer").submit(function(){
+                        if($("#pseudo").val().length !=0) 
+                        {
+                            if($("#cin").val().length ==8)
+                            {
+                                if($("#email").val().length !=0)
+                                {
+                                    if($("input:selected").length<=2)
+                                    {
+                                        alert("Inscription est achevée.");
+                                    }
+                                }
+                            }
+                        }
+                    })
+                })
+                $(function()
+                {
+                    $("#Annuler").click(function()
+                    {
+                        $("#pseudo").val("");
+                        $("#cin").val("");
+                        $("#email").val("");
+                        $("#Niveau").prop("checked",false);
+                        $("#modules").prop("selected",false);
+                    })
+                })
+            </script>
+		</body>
+	</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+	<h3>MODIFIER L’ATTRIBUT SRC D’UNE IMAGE AVEC JQUERY </h3>
+ <img id="mon_image" src="images/cat1.jpg" alt="survolez cette image "/><p>Hover to change the image</p>
+	<script>
+		$(document).ready( function (){
+  $("#mon_image").hover(
+     function () {
+        $(this).attr('src','images/cat1.png');
+     },
+      function () {
+        $(this).attr('src','images/cat2.png');
+    },
+  );
+});
+
+	</script>
+</body>
+</html>

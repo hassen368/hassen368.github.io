@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task4</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+<h3>EMPÊCHER DE COLLER DU TEXTE DANS UN CHAMPS INPUT DE TYPE TEXT</h3>
+<form>
+          <label >Inserer un pseudo nom sans coller : </label>
+          <input type="texte" id="no_paste" />
+</form>
+<script>
+	$(document).ready(function(){
+  document.getElementById('no_paste').addEventListener('keydown',
+  function (foo){
+      if (foo.keyCode == 86) 
+      {
+        alert("Le collage de texte n\'est pas autorisé !");
+        foo.preventDefault();//
+      }
+   })
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <title>Task8</title>
+  </head>
+  <body>
+      <h3>APPARITION D’UN ÉLÉMENT EN FONDU AVEC JQUERY SUR LE SURVOL DE SOURIS </h3>
+     
+      <br/>
+       <style type="text/css">
+        #monimage{
+  background: url("./images/cat2.png") left top no-repeat;
+  background-size: cover;
+  height: 500px;
+  opacity: 1;
+}
+               
+        </style>
+        
+    <script>
+    $(document).ready( function (){
+  $("#monimage").hover(
+    function(){
+     $("#temp").remove()
+     $(this).append("<div id='temp'></div>"); 
+     bgimg = "url(./images/cat2.png)";
+     $(this).find("#temp").css({
+       position:"absolute",
+       background:"transparent "+bgimg+" left top no-repeat",
+       opacity:0});
+     $(this).find("#temp").stop().animate({opacity:1},500);  },
+  function(){
+    
+       $(this).find("#temp").stop().animate({opacity:0},500,function(){$(this).remove()});
+    }
+  );
+})
+
+ </script>
+
+  </body>
+   
+</html>

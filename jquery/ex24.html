@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task 24</title>
+  </head>
+  <body>
+  
+      <h3>Siblings() parcours des frères immédiats d’un élément</h3>
+      <br/>
+      <div id="parent">
+        <div>Hassen</div>
+        <div>Hazem</div>
+        <div id="mondiv">Malek</div>
+        <div>Ayoub</div>
+      </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+      $("#mondiv").siblings('div').each(function(i){
+             alert (i +' : '+$(this).html());
+});
+$("#mondiv").parent().children('div').each(function(i){
+ alert (i +' : '+$(this).html());
+});
+
+    </script>
+  </body>
+</html>

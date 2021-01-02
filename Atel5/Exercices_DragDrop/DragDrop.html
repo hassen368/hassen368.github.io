@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Exercice Drag & Drop</title>
+<style >
+        #tasse{
+            background-image: url(./Images/tassecafe.jpg);
+            
+            height: 300px;
+            background-position: center;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    .boite {
+float: left;
+width: 500px;
+height: 500px;
+margin: 15px;
+border: 1px solid #aaaaaa;
+padding: 5vh;
+}
+</style>
+
+<script>
+     function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+      document.getElementById("draged").style.backgroundColor = "blue";
+   
+    
+    }
+     function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+      
+    }
+
+    function noDrop(event) {
+      
+      document.getElementById("draged").style.backgroundColor = "red";
+    }
+
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    
+   
+    
+   
+    
+    </script>
+    
+</head>
+
+<body>
+    
+
+    
+        
+        <div class="boite" ondrop="drop(event)" ondragover="allowDrop(event)" >
+          <img src="./Images/madelaine.png" draggable="true" ondragstart="drag(event)" ondragend="noDrop(event)" width="275" height="183" id="draged"/> 
+         
+        </div>
+        <div class="boite" id="tasse" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    
+        
+     
+
+ 
+  
+   
+  
+   
+  
+    
+  
+
+	
+</body>
+</html>

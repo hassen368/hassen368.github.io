@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    
+    <meta charset="utf-8">
+    <title>Atelier API</title>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    
+  </head>
+  <body>
+    <p id="d"></p>
+    
+  </body>
+
+</html>
+<script>
+  $(document).ready(function(){alert("bonjour");
+      if (typeof(Storage) !== "undefined") {
+          // Retrieve
+          //document.getElementById("d").innerHTML ="Votre réponse est bien enregistré. Merci<b>"+" "+sessionStorage.getItem("Name_v");
+          $('#d').html("Votre réponse est bien enregistré. Merci<b>" + sessionStorage.getItem("Name_v"));
+          }else{
+          document.getElementById("d").innerHTML = "Désolé ! Rien n'est enregistré ";
+        }
+});
+    </script>

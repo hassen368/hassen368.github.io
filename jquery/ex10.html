@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="media\JQuery.png">
+    <title>AtelierDevWeb</title>
+  </head>
+  <body>
+   
+      <h3> DÉTECTER UN CLICK À L’EXTÉRIEUR D’UN ÉLÉMENT AVEC JQUERY </h3>
+      <br/>
+     <style type="text/css">
+#monimage{
+  background: url("images/cat11.png") left top no-repeat;
+  background-size: 100;
+  height: 100px;
+  line-height: 100px;
+  opacity: 1.5;
+}
+</style> 
+      <div id="monimage">
+      <div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script >
+      $(document).ready( function (){
+  $('html').click(function(event){
+       if(event.target.id == 'monimage') {
+         alert ("j'ai cliqué sur l'image");
+       } else {
+         alert ("j'ai cliqué à exterieur de l'image");
+       }
+  });
+});
+
+    </script>
+  </body>
+</html>

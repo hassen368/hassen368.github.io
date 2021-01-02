@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<title>Task3</title>
+</head>
+<body>
+
+      <h3> RÉCUPÉRER LE CONTENU OU AFFICHER DU TEXTE DANS UN TEXTAREA EN JQUERY</h3>
+      <br/>
+      
+        <label >Text Input</label>
+        <br/>
+        <button class="btn_show">Afficher</button>
+        <button class="btn_Add">Add text</button>
+
+        <br/>
+        <textarea id="Mon_TxtArea" >Mon texte ici</textarea>
+      <script>
+      	$(document).ready(function(){
+  $(".btn_show").click(function(){
+      alert ("Le texte contenu dans le textarea est : \n" +
+      $("#Mon_TxtArea").val());
+  });
+
+  $(".btn_Add").click(function(){
+    alert ("Le texte contenu dans le textarea est : \n" +
+    $("#Mon_TxtArea").val()+
+    "\n mais je vais lui rajouter une série de XXXXXXXX en fin de texte!");
+;
+    $("#Mon_TxtArea").val($("#Mon_TxtArea").val()+'XXXXXXXX')
+  });
+
+});
+      </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<title>Task2</title>
+</head>
+<body>
+	<script >
+ $(document).ready(function(){
+  $("#insertAfter").click(function(){
+    $("<p>Je suis inseré aprés la Reference!</p>").insertAfter('.ma_classe');
+  });
+
+  $("#DeplacerDom").click(function(){
+    
+    $("span").insertAfter('#mon_div');
+  });
+  $("#DeplacerDom2").click(function(){
+    
+    $("<p>Un petit texte à insérer dans le DOM juste avant mon_div</p>").insertBefore('#mon_div');
+  });
+  $("#Append").click(function(){
+   
+    $( "#mon_div" ).append( "<p>** Je mets ça en fin de DIV **</p>" );
+  });
+  $("#preAppend").click(function(){
+  
+    $( "#mon_div" ).prepend( "<p>++ Tiens je rajoute ça en début de div ++</p>" );
+  });
+
+});
+
+</script>
+<div class="ribbon">
+      <h3> AJOUTER / DÉPLACER DYNAMIQUEMENT UN ÉLÉMENT DANS LE DOM AVEC JQUERY </h3>
+      <br/>
+      <span class='ma_classe'>-- Reference se situe ici --</span>
+      <div id="mon_div" >
+        Ce DIV est initialement dans le DOM a la fin de container
+      </div>
+      <br/>
+      <button id="insertAfter" name="button">insérer du code apres un autre element</button>
+      <button id="DeplacerDom" name="button">Deplacer un element dans le DOM</button>
+      <button id="DeplacerDom2" name="button">Deplacer/Ajouter un element just avant un autre element</button>
+      <button id="Append" name="button">Insérer un element a l'interier d'un autre élément </button>
+      <button id="preAppend" name="button">Deplacer/Ajouter un élement juste avant</button>
+
+    </div>
+</body>
+</html>
